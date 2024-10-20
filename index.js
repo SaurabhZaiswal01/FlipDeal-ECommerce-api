@@ -45,7 +45,7 @@ app.get('/estimate-delivery', (request, response) => {
   const { shippingMethod, distance } = request.query;
   const dist = parseFloat(distance);
   const deliveryDays =
-    shippingMethod == 'Express' ? Math.ceil(dist / 100) : Math.ceil(dist / 50);
+    shippingMethod == 'express' ? Math.ceil(dist / 100) : Math.ceil(dist / 50);
   response.send(deliveryDays.toString());
 });
 
